@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font: normal 20px arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Document Object Model</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong></p>
+    <div id="d1">Clique aqui</div>
+    <div name="d2">Clique aqui também</div>
+    <div id="d3">Clique aqui também também</div>
+    <script>
+        // innerTEXT = Pega apenas o texto
+        // innerHTML = Pega o texto formatado com HTML
+
+        var corpo = window.document.body
+        // Pegando o primeiro parágrafo via indice (semelhante a um array)
+        var p1 = window.document.getElementsByTagName('p')[1]
+        var div = window.document.getElementById('d1')
+        // Escrevendo o conteúdo do primeiro parágrafo
+        // window.document.write("Conteúdo do primeiro parágrafo: ", p1.innerText)
+        // Mudando o estilo do primeiro parágrafo 
+        // p1.style.color = "yellow"
+        // Mudando o estilo do corpo
+        // corpo.style.backgroundColor = "red"
+        window.document.write("Primeiro parágrafo formatado: ", p1.innerHTML)
+        div.style.backgroundColor = 'gray'
+        // window.alert(p1.innerHTML)
+        // div.innerText = "Por Favor..."
+        var div2 = window.document.getElementsByName('d2')[0].innerText = "Por favor..."
+        // selecionar por seletor
+        var div3 = window.document.querySelector('div#d3')
+        div3.style.backgroundColor = 'blue'
+    </script>
+</body>
+</html>

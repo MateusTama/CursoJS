@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localização</title>
+</head>
+<body>
+    <h1>Sistema de Localização</h1>
+    <input type="text" id="pais" placeholder="Em que país você mora?">
+    <input type="button" value="Enviar" onclick="verificar()">
+    <div id="resultado"></div>
+    <script>
+        function verificar() {
+            var pais = window.document.getElementById("pais").value
+            resultado = window.document.getElementById("resultado")
+            if (pais == "Brasil") {
+                resultado.innerHTML = `<strong>Brasileiro</strong>`
+            } else {
+                resultado.innerHTML = `<strong>Gringo</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
